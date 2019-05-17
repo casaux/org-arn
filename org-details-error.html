@@ -79,7 +79,16 @@
                      <li>Organisation <abbr title="Aviation reference number">ARN</abbr> application</li>
                   </ul>
                </nav>
+				<br><br>
 				<div class="col-lg-6 col-xs-12">
+				<div role="alert" class="au-page-alerts au-page-alerts--error">
+                  <div class="row">
+                     <div class="col-xs-12">
+                        <h3>Duplicate ARN</h3>
+						 <p>An ARN is already registered against this ABN, please try again</p>
+                     </div>
+                  </div>
+               </div>
 				
 				
                <header class="au-header" role="banner">
@@ -100,10 +109,16 @@
                   </div>
                </div>
 			<br><br>
-				 	<div class="default-values">
-					<label for="text-input-block1" class="casa-label-guidance"><abbr title="Australian business number">ABN</abbr></label>
-					<input class="au-text-input au-text-input--block" name="text-input-block1" id="text-input-block1" type="text" value="">
-			 		</div>
+				 	
+					
+					<section class="au-callout au-callout au-page-alerts--error" aria-label="Callout description1">
+						
+				<label for="text-input-block3" class="casa-label-guidance">ABN</label>
+				
+					
+				<input class="au-text-input au-text-input--block" name="text-input-block3" id="text-input-block3" type="text" value="1234">
+				 <p class="au-page-alerts--error error"><strong>Please enter an ABN</strong></p>
+								 </section>	
 
 			 
 			 
