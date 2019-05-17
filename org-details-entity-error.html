@@ -73,28 +73,56 @@
 			</div>
 		</div>
             <div class="container">
-				<br>
+               <nav class="au-breadcrumbs" aria-label="breadcrumb">
+                  <ul class="au-link-list au-link-list--inline">
+                     <li><a href="dashboard-bob.html">myCASA</a></li>
+                     <li>Organisation <abbr title="Aviation reference number">ARN</abbr> application</li>
+                  </ul>
+               </nav>
+				<br><br>
 				<div class="col-lg-6 col-xs-12">
-					
-													 <div role="alert" class="au-page-alerts au-page-alerts--success">
+				<div role="alert" class="au-page-alerts au-page-alerts--error">
                   <div class="row">
                      <div class="col-xs-12">
-                        <h3>Application submitted</h3>
-					 </div>
+                        <h3>Invalid entity type</h3>
+						 <p>The ABN input is for an invalid entity type. Accepted entity types for an organisation ARN are:<br><br>
+							 X<br>
+						 Y<br>
+						 Z</p>
+                     </div>
                   </div>
                </div>
-
+				
+				
+               <header class="au-header" role="banner">
+                  <h1 class="break desktop au-header-heading">Organisation <abbr title="Aviation reference number">ARN</abbr> application</h1>
+                  <a class="au-direction-link au-direction-link--left" href="dashboard-bob.html">Back</a>
+               </header>
+			
+					
+				<h2>Organisation details</h2>
 				<br>
 					
+					               <div class="au-callout">
+                  <div class="row">
 
-			 		
-		<p>Thank you Bob,<br><br>
+                        <h4>Australian business number (ABN) lookup</h4>
+                        <p>For organisations registered with ASIC, an ARN can be issued within in a few minutes. CASA will check your <abbr title="Australian business number">ABN</abbr> with the Australian Business Register to validate the number provided.</p>
 
-You have successfully submitted an organisation ARN application. We have sent a confirmation of your application to your email address <strong>bob.furzer@gmail.com</strong> and the contact email address for the organisation <strong>bob@bobsdronedelivery.com</strong><br><br>
-			
-Your organisations ARN will be displayed on your organisations dashboard within the next
-two minutes.</p>
-		
+                  </div>
+               </div>
+			<br><br>
+				 	
+					
+					<section class="au-callout au-callout au-page-alerts--error" aria-label="Callout description1">
+						
+				<label for="text-input-block3" class="casa-label-guidance">ABN</label>
+				
+					
+				<input class="au-text-input au-text-input--block" name="text-input-block3" id="text-input-block3" type="text" value="1234">
+				 <p class="au-page-alerts--error error"><strong>Please enter an ABN</strong></p>
+								 </section>	
+
 			 
 			 
 
@@ -103,7 +131,7 @@ two minutes.</p>
 				   
 				<div class="form-navigation">
 
-				<a class="au-direction-link au-direction-link--right" href="dashboard-select.html">Go to profile selection</a>
+				<a class="au-btn" href="org-address.html">Next</a>
 					
 
 
@@ -112,7 +140,10 @@ two minutes.</p>
 					
 
 				</div>
-
+				               <hr />
+            <a href="#" class="au-btn au-btn--secondary">
+            Save and exit
+					</a>&nbsp; to continue this application later</p>
 				</div> 
             </div>
 			 </div>
