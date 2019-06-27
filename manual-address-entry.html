@@ -13,38 +13,16 @@
       <script type="text/javascript">
          /* page specific js */
          
-		  $( document ).ready(function() {
-
-			  $(".address-type").on('input', function() {
-				  
-				  if($("input:radio[name='radio-ex']:checked").val()=="postal"){
-					  
-					  $("#postal").css("display","block");
-					  
-				  } else {
-					  
-					  $("#postal").css("display","none");
-					  
-				  }
-				  
-			  });
-			  
-			  		  $( document ).ready(function() {
-
-			  $(".registration-type").on('input', function() {
-				  
-				  if($("input:radio[name='radio-ex']:checked").val()=="commercial"){
-					  
-					  $("#commercial").css("display","block");
-					  
-				  } else {
-					  
-					  $("#commercial").css("display","none");
-					  
-				  }
-				  
-			  });
-			  
+         $(document).ready(function() {
+       
+     
+			 $("#validate a"). click(function(){
+				var radioValue = $("input[name='id']:checked"). val();
+				window.location.href=radioValue+".html";
+			 });
+				
+				 
+         });
       </script>
       <style type="text/css">
          /* page specific css */
@@ -101,30 +79,20 @@
                      <li>Organisation <abbr title="Aviation reference number">ARN</abbr> application</li>
                   </ul>
                </nav>
-				<br><br>
-				<div class="col-lg-6 col-xs-12">
-				 <div role="alert" class="au-page-alerts au-page-alerts--success">
-                  <div class="row">
-                     <div class="col-xs-12">
-                        <h3>ABN 1234567890 verified</h3>
-						 <p><strong>Registered Name:</strong><br> Bob's Drone Delivery<br><br>
-							 <strong>Australian Company Number (ACN):</strong> 5555555555</strong><br><br>
-                     </div>
-                  </div>
-               </div>
 				
-               <header class="au-header" role="banner">
-                  <h1 class="break desktop au-header-heading">Organisation <abbr title="Aviation reference number">ARN</abbr> application</h1>
-                  <a class="au-direction-link au-direction-link--left" href="org-details.html">Back</a>
-               </header>
-			
-					
+			<header class="au-header" role="banner">
+				<h1 class="au-header-heading">Organisation ARN application</h1>
+				<a class="au-direction-link au-direction-link--left" href="org-address.html">Back</a>
+
+				</header>
+				<div class="col-lg-6 col-xs-12">
+					<div class="row">
 				<h2>Organisation physical address details</h2>
 				<br>
 					
 <label class="casa-label-guidance">Country</label>
 <select id="select1block" class="au-select au-select--block">
-   <option value="1">Australia</option>
+  <option value="1">Australia</option>
   <option value="2">Argentina</option>
   <option value="3">Bangladesh</option>
   <option value="4">Belgium</option>
@@ -136,61 +104,91 @@
 				
 				<br>
 				<br>
-				<label class="casa-label-guidance" for="text-input-block">Address</label>
+				<label class="casa-label-guidance">Unit number or building level</label>
 				<input class="au-text-input au-text-input--block" name="text-input-block" id="text-input-block" type="text" value="">
-				
-				<br />
-				
-				<a class="au-btn au-btn--secondary" href="arn3-other-country.html">Enter address manually</a>
-			
+				<br>
+				<label class="casa-label-guidance">House or building number</label>
+				<input class="au-text-input au-text-input--block" name="text-input-block" id="text-input-block" type="text" value="">
+				<br>
+				<label class="casa-label-guidance">Building name</label>
+				<input class="au-text-input au-text-input--block" name="text-input-block" id="text-input-block" type="text" value="">
+				<br>
+				<label class="casa-label-guidance">Street name</label>
+				<input class="au-text-input au-text-input--block" name="text-input-block" id="text-input-block" type="text" value="">
+				<br>
+				<label class="casa-label-guidance">City, suburb or town</label>
+				<input class="au-text-input au-text-input--block" name="text-input-block" id="text-input-block" type="text" value="">
+				<br>
+<label class="casa-label-guidance">State</label>
+<select id="select1block" class="au-select au-select--block">
+  <option value="1">Please select</option>
+  <option value="2">Australian Capital Territory</option>
+  <option value="3">New South Wales</option>
+  <option value="4">Northern Territory</option>
+  <option value="5">Queensland</option>
+  <option value="6">South Australia</option>
+  <option value="7">Tasmania</option>
+  <option value="8">Victoria</option>
+<option value="8">Western Australia</option>
+</select>
 				<br><br>
-
+				<label class="casa-label-guidance">Postcode</label>
+				<input class="au-text-input au-text-input--block" name="text-input-block" id="text-input-block" type="text" value="">	
+				<br />
+				<br>
+				<a class="au-btn au-btn--secondary" href="org-address.html">Return to address look up</a>
+				<br><br>
+				
+				
 				<p class="casa-form-descriptor">Is the postal address different to the physical address?</p>
-			
+				
 				<br />
 				
 				<label class="au-control-input">
-				  <input class="au-control-input__input address-type" type="radio" name="radio-ex" checked value="physical">
+				  <input class="au-control-input__input" type="radio" name="radio-ex" checked>
 				  <span class="au-control-input__text">No</span>
 				</label>
 				
 				<br /><br />
 				
 				<label class="au-control-input">
-				  <input class="au-control-input__input address-type" type="radio" name="radio-ex" value="postal">
+				  <input class="au-control-input__input" type="radio" name="radio-ex">
 				  <span class="au-control-input__text">Yes</span>
 				</label>
-
-			 
-			 
-
-			 
-			 <br><br><br>
-
 				
+				<br><br><br>
 				
-				
-				<div class="form-navigation">
-
-				<a class="au-btn" href="org-contact-details.html">Next</a>
+			
+  			<a class="au-btn" href="09a-drone-registration-arn-primary-id-select.html">Next</a>
 					
+			<hr />
 
-
-
-
-					
-
+<a href="saved.html" class="au-btn au-btn--secondary">
+  Save and exit
+</a>&nbsp; to continue this application later
+			
 				</div>
-				               <hr />
-            <a href="#" class="au-btn au-btn--secondary">
-            Save and exit
-					</a>&nbsp; to continue this application later</p>
-				</div> 
-            </div>
-			 </div>
-		  </div>
-
-
+				
+			</form>
+				
+								
+				
+		
+			
+				
+			</div>
+			
+			
+			<!--
+			<div class="row">
+			  <div class="col-xs-4"><span>4</span></div>
+			  <div class="col-xs-4"><span>4</span></div>
+			  <div class="col-xs-4"><span>4</span></div>
+			</div>-->
+			
+		</div>	
+	</div>
+	
 <div class="footer">
 		<div class="footer-wrapper">
 			<iframe src="footer.html" frameborder="0" border="0" scrolling="no"></iframe>
